@@ -1,0 +1,44 @@
+/* contact-form-7 styles
+----------------------------------------------------------------- */
+
+form.wpcf7-form{
+	.columns_wrap{
+		display: flex;
+		gap: 2em;
+
+		margin-right: 0!important;
+
+		> *{
+			flex-grow: 0;
+			padding-right: 0!important;
+		}
+
+		&::before,
+		&::after{
+			display: none;
+		}
+
+		span.wpcf7-form-control-wrap{
+			display: inline-block;
+			width: 100%;
+			position: relative;
+
+			span.wpcf7-not-valid-tip{
+				position: absolute;
+				top: 100%;
+				left: 0;
+				line-height: 1.6;
+			}
+		}
+	}
+
+	.wpcf7-spinner{
+		position: absolute;
+		margin: 0;
+		box-sizing: border-box;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+}

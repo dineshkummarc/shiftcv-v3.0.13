@@ -1,0 +1,41 @@
+/* Blog layout: Excerpt 
+------------------------- */
+.post_layout_excerpt {
+	position:relative;
+	margin-bottom:0;
+}
+.post_layout_excerpt + .post_layout_excerpt {
+	margin-top: 5px;
+}
+.post_layout_excerpt .post_featured {
+	display: inline-block;
+}
+.post_layout_excerpt.post_format_audio .post_featured.without_thumb,
+.post_layout_excerpt.post_format_gallery .post_featured.without_thumb {
+	display:block;
+}
+.post_layout_excerpt .post_header {
+	margin: 0;
+	position:relative;
+}
+.post_layout_excerpt .post_header .post_price {
+	width: auto;
+	@include abs-rt;
+	@include font(2.5em, 1.5em);
+}
+.post_layout_excerpt .post_title {
+	margin: 0;
+	line-height: 1.4;
+}
+.post_layout_excerpt .post_header + .post_content {
+	margin-top: 2rem;
+}
+.post_layout_excerpt.format-link .post_header + .post_content {
+	margin-top: 1rem;
+}
+
+// First post large in the Classic and Masonry
+body[class*="blog_style_classic"] .post_layout_excerpt,
+body[class*="blog_style_masonry"] .post_layout_excerpt {
+	margin-bottom: 3em;
+}

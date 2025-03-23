@@ -1,0 +1,95 @@
+/* Blog layout: Portfolio
+------------------------- */
+.post_layout_portfolio .post_title {
+	margin: 1em 0 0.4em;
+}
+.post_layout_portfolio .post_featured {
+	margin-bottom:0;
+}
+.post_layout_portfolio .post_featured img {
+	width: 100%;
+}
+
+//  This way not use any scripts to build masonry layout, but Google Chrome broke hovers in 2+ columns!!!
+//-------------------------------------------------------------------------------------------------------
+
+
+
+
+//}
+
+
+//}
+
+
+//}
+
+
+
+
+
+//}
+
+
+
+//  This way use masonry.js script to build masonry layout and work properly in any browsers!
+//-----------------------------------------------------------------------------------------------------
+.portfolio_wrap {
+	position:relative;
+	margin-right:-$grid_gap;
+}
+.post_layout_portfolio {
+	position:relative;
+    display: inline-block;
+	vertical-align:top;
+	padding:0 $grid_gap $grid_gap 0;
+	margin-bottom:0;
+    width: 50%;
+	border-width: 0;
+	@include border-box;
+}
+.portfolio_wrap.portfolio_3 .post_layout_portfolio {
+    width: 33.3333%;
+}
+.portfolio_wrap.portfolio_4 .post_layout_portfolio {
+    width: 25%;
+}
+.portfolio_wrap.portfolio_2 .post_layout_portfolio.format-audio,
+.portfolio_wrap.portfolio_3 .post_layout_portfolio.format-audio,
+.portfolio_wrap.portfolio_4 .post_layout_portfolio.format-audio {
+
+	.mejs-container:not(.mejs-video) .mejs-controls, .mejs-container:not(.mejs-video), .trx_addons_audio_player .mejs-container:not(.mejs-video),
+	.format-audio .post_featured .mejs-container, .post_featured.with_thumb .mejs-container, .post_featured.with_thumb .mejs-controls, .post_featured > div > .mejs-container,
+	.post_featured > div > .mejs-container .mejs-controls, .trx_addons_audio_player.with_cover .mejs-container, .trx_addons_audio_player.with_cover .mejs-controls {
+		padding: 0 1rem;
+	}
+	.mejs-controls .mejs-button.mejs-volume-button {
+		margin-left: .5rem;
+	}
+	.mejs-controls .mejs-button {
+		height: 2rem;
+		width: 2rem;
+		margin-right: .5rem;
+	}
+	.mejs-controls .mejs-time-rail {
+		margin: 0 5px;
+	}
+	.mejs-controls .mejs-horizontal-volume-total,
+	.mejs-controls .mejs-horizontal-volume-slider {
+		width: 35px;
+	}
+	.mejs-container:not(.mejs-video), .trx_addons_audio_player .mejs-container:not(.mejs-video), .format-audio .post_featured .mejs-container {
+		height: 3.7rem !important;
+	}
+}
+.post_layout_portfolio .label_sticky {
+	top: -12px;
+	left: -12px;
+	right:auto;
+	@include rotate(135deg);
+}
+
+// Portfolio in the slider
+.post_layout_portfolio.slider-slide {
+	padding: 0;
+}
